@@ -1,0 +1,257 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|c:\\users\\carlo\\documents\\estudos\\carshopping\\carshopping\\carshopping\\controllers\\businesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|solutionrelative:carshopping\\controllers\\businesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|c:\\users\\carlo\\documents\\estudos\\carshopping\\carshopping\\carshopping\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|solutionrelative:carshopping\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|c:\\users\\carlo\\documents\\estudos\\carshopping\\carshopping\\carshopping\\repository\\businessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|solutionrelative:carshopping\\repository\\businessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|c:\\users\\carlo\\documents\\estudos\\carshopping\\carshopping\\carshopping\\controllers\\cardealercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|solutionrelative:carshopping\\controllers\\cardealercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|c:\\users\\carlo\\documents\\estudos\\carshopping\\carshopping\\carshopping\\repository\\icardealerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|solutionrelative:carshopping\\repository\\icardealerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|c:\\users\\carlo\\documents\\estudos\\carshopping\\carshopping\\carshopping\\repository\\ibusinessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|solutionrelative:carshopping\\repository\\ibusinessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|c:\\users\\carlo\\documents\\estudos\\carshopping\\carshopping\\carshopping\\repository\\cardealerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|solutionrelative:carshopping\\repository\\cardealerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|c:\\users\\carlo\\documents\\estudos\\carshopping\\carshopping\\carshopping\\repository\\carrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|solutionrelative:carshopping\\repository\\carrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|c:\\users\\carlo\\documents\\estudos\\carshopping\\carshopping\\carshopping\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|solutionrelative:carshopping\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|c:\\users\\carlo\\documents\\estudos\\carshopping\\carshopping\\carshopping\\repository\\icarrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|solutionrelative:carshopping\\repository\\icarrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|c:\\users\\carlo\\documents\\estudos\\carshopping\\carshopping\\carshopping\\model\\cardealer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|solutionrelative:carshopping\\model\\cardealer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|c:\\users\\carlo\\documents\\estudos\\carshopping\\carshopping\\carshopping\\model\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|solutionrelative:carshopping\\model\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|c:\\users\\carlo\\documents\\estudos\\carshopping\\carshopping\\carshopping\\model\\context\\mysqlcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2F80D40-CB25-4B8C-8549-3606A198F560}|CarShopping\\CarShopping.csproj|solutionrelative:carshopping\\model\\context\\mysqlcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IBusinessRepository.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Repository\\IBusinessRepository.cs",
+              "RelativeDocumentMoniker": "CarShopping\\Repository\\IBusinessRepository.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Repository\\IBusinessRepository.cs",
+              "RelativeToolTip": "CarShopping\\Repository\\IBusinessRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T22:22:04.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BusinessController.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Controllers\\BusinessController.cs",
+              "RelativeDocumentMoniker": "CarShopping\\Controllers\\BusinessController.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Controllers\\BusinessController.cs",
+              "RelativeToolTip": "CarShopping\\Controllers\\BusinessController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T22:20:15.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CarRepository.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Repository\\CarRepository.cs",
+              "RelativeDocumentMoniker": "CarShopping\\Repository\\CarRepository.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Repository\\CarRepository.cs",
+              "RelativeToolTip": "CarShopping\\Repository\\CarRepository.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAwwD0AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T19:53:01.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Model\\Car.cs",
+              "RelativeDocumentMoniker": "CarShopping\\Model\\Car.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Model\\Car.cs",
+              "RelativeToolTip": "CarShopping\\Model\\Car.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T14:20:21.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CarController.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Controllers\\CarController.cs",
+              "RelativeDocumentMoniker": "CarShopping\\Controllers\\CarController.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Controllers\\CarController.cs",
+              "RelativeToolTip": "CarShopping\\Controllers\\CarController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T14:08:07.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CarDealerController.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Controllers\\CarDealerController.cs",
+              "RelativeDocumentMoniker": "CarShopping\\Controllers\\CarDealerController.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Controllers\\CarDealerController.cs",
+              "RelativeToolTip": "CarShopping\\Controllers\\CarDealerController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T13:25:28.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CarDealerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Repository\\CarDealerRepository.cs",
+              "RelativeDocumentMoniker": "CarShopping\\Repository\\CarDealerRepository.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Repository\\CarDealerRepository.cs",
+              "RelativeToolTip": "CarShopping\\Repository\\CarDealerRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T00:47:48.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ICarDealerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Repository\\ICarDealerRepository.cs",
+              "RelativeDocumentMoniker": "CarShopping\\Repository\\ICarDealerRepository.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Repository\\ICarDealerRepository.cs",
+              "RelativeToolTip": "CarShopping\\Repository\\ICarDealerRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T19:55:21.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BusinessRepository.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Repository\\BusinessRepository.cs",
+              "RelativeDocumentMoniker": "CarShopping\\Repository\\BusinessRepository.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Repository\\BusinessRepository.cs",
+              "RelativeToolTip": "CarShopping\\Repository\\BusinessRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T22:21:57.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Program.cs",
+              "RelativeDocumentMoniker": "CarShopping\\Program.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Program.cs",
+              "RelativeToolTip": "CarShopping\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABkAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T22:19:16.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ICarRepository.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Repository\\ICarRepository.cs",
+              "RelativeDocumentMoniker": "CarShopping\\Repository\\ICarRepository.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Repository\\ICarRepository.cs",
+              "RelativeToolTip": "CarShopping\\Repository\\ICarRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T19:55:31.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CarDealer.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Model\\CarDealer.cs",
+              "RelativeDocumentMoniker": "CarShopping\\Model\\CarDealer.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Model\\CarDealer.cs",
+              "RelativeToolTip": "CarShopping\\Model\\CarDealer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T21:58:22.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MySQLContext.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Model\\Context\\MySQLContext.cs",
+              "RelativeDocumentMoniker": "CarShopping\\Model\\Context\\MySQLContext.cs",
+              "ToolTip": "C:\\Users\\carlo\\Documents\\Estudos\\CarShopping\\CarShopping\\CarShopping\\Model\\Context\\MySQLContext.cs",
+              "RelativeToolTip": "CarShopping\\Model\\Context\\MySQLContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T12:17:37.746Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
