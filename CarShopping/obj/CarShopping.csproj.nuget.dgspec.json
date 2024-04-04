@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.10, )"
