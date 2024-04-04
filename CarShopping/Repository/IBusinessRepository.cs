@@ -6,5 +6,6 @@ namespace CarShopping.Repository
     public interface IBusinessRepository
     {
         Task<List<CarVO>> DownloadCarsAsTextFile();
+        Task<List<CarVO>> RecieveTextFile(List<CarVO> list);
     }
 }

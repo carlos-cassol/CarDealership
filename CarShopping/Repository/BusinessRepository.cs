@@ -9,14 +9,32 @@ namespace CarShopping.Repository
 {
     public class BusinessRepository : IBusinessRepository
     {
-        private MySQLContext _context;
+        private readonly MySQLContext _context;
         private IMapper _mapper;
 
+        public BusinessRepository(MySQLContext context, IMapper mapper)
+        {
+            _context = context;
+            _mapper = mapper;
+        }
         public async Task<List<CarVO>> DownloadCarsAsTextFile()
         {
             var cars = await _context.Car.ToListAsync();
 
             return _mapper.Map<List<CarVO>>(cars);
+        }
+        public async Task<List<CarVO>> RecieveTextFile(List<CarVO> list)
+        {
+
+            foreach (var carVO in list)
+            {
+                Car car = _mapper.Map<Car>(carVO);
+                _context.Car.Add(car);
+            }
+
+            await _context.SaveChangesAsync();
+            return list;
+
         }
     }
 }
