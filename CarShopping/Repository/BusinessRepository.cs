@@ -4,6 +4,7 @@ using CarShopping.Model;
 using CarShopping.Model.Context;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
 
 namespace CarShopping.Repository
 {
@@ -23,6 +24,12 @@ namespace CarShopping.Repository
 
             return _mapper.Map<List<CarVO>>(cars);
         }
+
+        public Task<ExcelWorkbook> ExportModelFile()
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<List<CarVO>> RecieveTextFile(List<CarVO> list)
         {
 

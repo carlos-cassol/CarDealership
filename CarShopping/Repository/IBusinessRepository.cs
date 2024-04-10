@@ -1,5 +1,6 @@
 ﻿using CarShopping.Data.ValueObjects;
 using Microsoft.AspNetCore.Mvc;
+using OfficeOpenXml;
 
 namespace CarShopping.Repository
 {
@@ -7,5 +8,6 @@ namespace CarShopping.Repository
     {
         Task<List<CarVO>> DownloadCarsAsTextFile();
         Task<List<CarVO>> RecieveTextFile(List<CarVO> list);
+        Task<ExcelWorkbook> ExportModelFile();
     }
 }
