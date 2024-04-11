@@ -2,7 +2,9 @@
 using CarShopping.Repository;
 using Microsoft.AspNetCore.Mvc;
 using OfficeOpenXml;
+using OfficeOpenXml.Style;
 using System.Data;
+using System.Drawing;
 using System.Text;
 
 namespace CarShopping.Controllers
@@ -32,6 +34,35 @@ namespace CarShopping.Controllers
             HttpContext.Response.Headers.Add("Content-Disposition", "attachment; filename=cars_info.txt");
 
             return File(byteArray, "text/plain");
+        }
+
+        [HttpGet("generateModel")]
+        public ActionResult ExportModelFile()
+        {
+            MemoryStream stream = new();
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            ExcelPackage package = new(stream);
+
+            var ws = package.Workbook.Worksheets.Add("Modelo");
+
+            ws.Cells[1, 1].Value = "Marca";
+            ws.Cells[1, 2].Value = "Nome";
+            ws.Cells[1, 3].Value = "Descrição";
+            ws.Cells[1, 4].Value = "Quilometragem";
+            ws.Cells[1, 5].Value = "Data de Fabricação";
+            ws.Cells[1, 6].Value = "Valor de Venda";
+            ws.Cells[1, 7].Value = "Já foi vendido?";
+            ws.Cells[1, 8].Value = "Está disponível?";
+
+            var header = ws.Cells[1, 1, 1, ws.Dimension.End.Column];
+            header.Style.Fill.PatternType = ExcelFillStyle.Solid;
+            header.Style.Fill.BackgroundColor.SetColor(ColorTranslator.FromHtml("#000000"));
+            header.Style.Font.Color.SetColor(ColorTranslator.FromHtml("#FFFFFF"));
+
+            package.Save();
+            stream.Position = 0;
+
+            return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "BusinessModel.xlsx");
         }
 
         [HttpPost("import")]
