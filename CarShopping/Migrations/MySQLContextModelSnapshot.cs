@@ -3,6 +3,7 @@ using System;
 using CarShopping.Model.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -17,7 +18,9 @@ namespace CarShopping.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.16")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("CarShopping.Model.Car", b =>
                 {
@@ -26,26 +29,28 @@ namespace CarShopping.Migrations
                         .HasColumnType("bigint")
                         .HasColumnName("id");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
                     b.Property<string>("Brand")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("brand");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("description");
 
-                    b.Property<DateOnly>("FabricationDate")
-                        .HasColumnType("date")
+                    b.Property<DateTime>("FabricationDate")
+                        .HasColumnType("datetime2")
                         .HasColumnName("fabricationDate");
 
                     b.Property<bool>("IsAvaliable")
-                        .HasColumnType("tinyint(1)")
+                        .HasColumnType("bit")
                         .HasColumnName("isAvaliable");
 
                     b.Property<bool>("IsSold")
-                        .HasColumnType("tinyint(1)")
+                        .HasColumnType("bit")
                         .HasColumnName("isSold");
 
                     b.Property<int>("Mileage")
@@ -54,11 +59,11 @@ namespace CarShopping.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("name");
 
                     b.Property<double>("SellingValue")
-                        .HasColumnType("double")
+                        .HasColumnType("float")
                         .HasColumnName("sellingValue");
 
                     b.HasKey("Id");
@@ -73,6 +78,8 @@ namespace CarShopping.Migrations
                         .HasColumnType("bigint")
                         .HasColumnName("id");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
                     b.Property<int>("AmountAvaliableCars")
                         .HasColumnType("int")
                         .HasColumnName("amountAvaliableCars");
@@ -86,12 +93,12 @@ namespace CarShopping.Migrations
                         .HasColumnName("employeesQuantity");
 
                     b.Property<double>("MonthRevenue")
-                        .HasColumnType("double")
+                        .HasColumnType("float")
                         .HasColumnName("monthRevenue");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("longtext")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("name");
 
                     b.HasKey("Id");

@@ -20,7 +20,7 @@ namespace CarShopping.Model
         public int Mileage { get; set; }
         [Column("fabricationDate")]
         [Required]
-        public DateOnly FabricationDate { get; set; }
+        public DateTime FabricationDate { get; set; }
         [Column("sellingValue")]
         [Required]
         public double SellingValue { get; set; }

@@ -97,7 +97,7 @@ namespace CarShopping.Controllers
                             Name = row[1].ToString(),
                             Description = row[2].ToString(),
                             Mileage = int.Parse(row[3].ToString()),
-                            FabricationDate = DateOnly.Parse(row[4].ToString()),
+                            FabricationDate = DateTime.Parse(row[4].ToString()),
                             SellingValue = double.Parse(row[5].ToString()),
                             IsSold = Convert.ToBoolean(int.Parse(row[6].ToString())),
                             IsAvaliable = Convert.ToBoolean(int.Parse(row[7].ToString()))

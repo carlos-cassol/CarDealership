@@ -15,7 +15,9 @@ builder.Services.AddSwaggerGen();
 
 var connection = builder.Configuration["MySqlConnection:ConnectionString"];
 
-builder.Services.AddDbContext<MySQLContext>(opt => opt.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 29))));
+//builder.Services.AddDbContext<MySQLContext>(opt => opt.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 29))));
+
+builder.Services.AddDbContext<MySQLContext>(options => options.UseSqlServer(connection));
 
 IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
@@ -28,12 +30,15 @@ builder.Services.AddScoped<IBusinessRepository, BusinessRepository>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+//// Configure the HTTP request pipeline.
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
