@@ -8,6 +8,6 @@ namespace CarShopping.Repository
     {
         Task<List<CarVO>> DownloadCarsAsTextFile();
         Task<List<CarVO>> RecieveTextFile(List<CarVO> list);
-        Task<ExcelWorkbook> ExportModelFile();
+        Task<MemoryStream> ExportModelFile();
     }
 }
