@@ -1,8 +1,6 @@
-﻿using CarShopping.Data.BaseValueObject;
-
-namespace CarShopping.Data.ValueObjects
+﻿namespace CarShopping.Data.ValueObjects
 {
-    public class CarDealerVO : BaseVO
+    public class CarDealerVO
     {
         public string Name { get; set; }
         public int CarQuantity { get; set; }
