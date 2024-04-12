@@ -7,7 +7,8 @@ namespace CarShopping.Repository
     public interface IBusinessRepository
     {
         Task<List<CarVO>> DownloadCarsAsTextFile();
-        Task<List<CarVO>> RecieveTextFile(List<CarVO> list);
+        Task<List<CarVO>> RecieveTextFile(IFormFile file);
         Task<MemoryStream> ExportModelFile();
+        string GenerateTextFileContent(IEnumerable<CarVO> cars);
     }
 }

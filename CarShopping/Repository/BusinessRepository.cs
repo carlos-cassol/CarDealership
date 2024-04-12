@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
+using System.Data;
 using System.Drawing;
+using System.Text;
 
 namespace CarShopping.Repository
 {
@@ -56,18 +58,77 @@ namespace CarShopping.Repository
             return stream;
         }
 
-        public async Task<List<CarVO>> RecieveTextFile(List<CarVO> list)
+        public async Task<List<CarVO>> RecieveTextFile(IFormFile file)
         {
+            List<CarVO> carList = new();
+            MemoryStream stream = new();
 
-            foreach (var carVO in list)
+            await file.CopyToAsync(stream);
+            ExcelPackage importedFile = new(stream);
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            ExcelWorksheet carsSheet = importedFile.Workbook.Worksheets[0];
+            var resultTable = LoadFromExcel(carsSheet);
+
+            foreach (DataRow row in resultTable.Rows)
+            {
+                CarVO car = new CarVO()
+                {
+                    Brand = row[0].ToString(),
+                    Name = row[1].ToString(),
+                    Description = row[2].ToString(),
+                    Mileage = int.Parse(row[3].ToString()),
+                    FabricationDate = DateTime.Parse(row[4].ToString()),
+                    SellingValue = double.Parse(row[5].ToString()),
+                    IsSold = Convert.ToBoolean(int.Parse(row[6].ToString())),
+                    IsAvaliable = Convert.ToBoolean(int.Parse(row[7].ToString()))
+                };
+                carList.Add(car);
+            }
+
+            foreach (var carVO in carList)
             {
                 Car car = _mapper.Map<Car>(carVO);
                 _context.Car.Add(car);
             }
 
             await _context.SaveChangesAsync();
-            return list;
+            return carList;
 
         }
+        public string GenerateTextFileContent(IEnumerable<CarVO> cars)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Cars Information:");
+            sb.AppendLine("----------------");
+            foreach (var car in cars)
+            {
+                sb.AppendLine($"Brand: {car.Brand}, Model: {car.Name}, Description: {car.Description},Year: {car.FabricationDate}, Mileage: {car.Mileage},Value: {car.SellingValue}");
+                sb.AppendLine(" ");
+            }
+            return sb.ToString();
+        }
+
+        private static DataTable LoadFromExcel(ExcelWorksheet worksheet)
+        {
+            DataTable dataTable = new();
+
+            foreach (var firstRowCell in worksheet.Cells[1, 1, 1, worksheet.Dimension.End.Column])
+            {
+                dataTable.Columns.Add(firstRowCell.Text);
+            }
+
+            for (var row = 2; row <= worksheet.Dimension.End.Row; row++)
+            {
+                var dataRow = dataTable.NewRow();
+                for (var col = 1; col <= worksheet.Dimension.End.Column; col++)
+                {
+                    dataRow[col - 1] = worksheet.Cells[row, col].Text;
+                }
+                dataTable.Rows.Add(dataRow);
+            }
+
+            return dataTable;
+        }
+
     }
 }
