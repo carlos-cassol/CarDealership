@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarShopping")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5712deaa939e5efbe861f92927c1a0dc2f76db7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fdd523fdc4a7087259b7913efa82ecb58c47d9e")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarShopping")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarShopping")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

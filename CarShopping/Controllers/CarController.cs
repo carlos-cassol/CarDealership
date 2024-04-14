@@ -41,7 +41,7 @@ namespace CarShopping.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> Update(CarVO car)
+        public async Task<ActionResult> Update([FromBody] CarVO car)
         {
             var status = await _carRepository.Update(car);
             return Ok(status);
