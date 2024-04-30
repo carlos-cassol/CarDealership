@@ -7,34 +7,36 @@
 <h1>CarIndex</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="CreateCar" class="btn btn-success">
+        <i class="fas fa-edit">Adicionar Veículo</i>
+    </a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Brand)
+                Marca
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Modelo
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                Descrição
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Mileage)
+                Quilometragem
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FabricationDate)
+                Data de Fabricação
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SellingValue)
+                Valor de Venda
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IsSold)
+                Já foi Vendido?
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IsAvaliable)
+                Disponibilidade
             </th>
             <th></th>
         </tr>
@@ -55,10 +57,16 @@
                 @Html.DisplayFor(modelItem => item.Mileage)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FabricationDate)
+                @{
+                    var date = item.FabricationDate.ToString("yyyy");
+                 }
+                @Html.DisplayFor(modelItem => date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SellingValue)
+                    @{
+                        var sellingValue = item.SellingValue.ToString("c");
+                    }
+                    @Html.DisplayFor(modelItem => sellingValue)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IsSold)
@@ -67,9 +75,20 @@
                 @Html.DisplayFor(modelItem => item.IsAvaliable)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    <a asp-action="UpdateCar" class="btn btn-warning" asp-route-id="@item.Id">
+                        <i class="fas fa-edit">Atualizar Veículo</i>
+                    </a>
+            </td>
+            <td>
+                    <a asp-action="FindCarById" class="btn btn-info" asp-route-id="@item.Id">
+                        <i class="fas fa-edit">Inspencionar Veículo</i>
+                    </a>
+            </td>
+            <td>
+                    <a asp-action="DeleteCar" class="btn btn-danger" asp-route-id="@item.Id">
+                        <i class="fas fa-edit">Remover Veículo</i>
+                    </a>
+                
             </td>
         </tr>
 }
