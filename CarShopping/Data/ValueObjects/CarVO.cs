@@ -1,7 +1,10 @@
-﻿namespace CarShopping.Data.ValueObjects
+﻿using CarShopping.Model.Base;
+
+namespace CarShopping.Data.ValueObjects
 {
-    public class CarVO
+    public class CarVO : BaseEntityVO
     {
+        public long Id { get; set; }
         public string Brand { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

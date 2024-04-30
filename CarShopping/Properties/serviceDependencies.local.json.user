@@ -1,24 +1,4 @@
 {
-  "dependencies": {
-    "mssql1": {
-      "restored": true,
-      "restoreTime": "2024-04-11T16:16:08.4461044Z"
-    },
-    "secrets1": {
-      "restored": true,
-      "restoreTime": "2024-04-11T16:15:32.8194397Z"
-    }
-  },
-  "parameters": {
-    "mssql1.subscriptionId": {
-      "Name": "mssql1.subscriptionId",
-      "Type": "subscription",
-      "Value": "ed4ce5cc-46e6-47bb-8be1-e4f0c3656ee3"
-    },
-    "mssql1.resourceGroupName": {
-      "Name": "mssql1.resourceGroupName",
-      "Type": "resourceGroup",
-      "Value": "CarShop"
-    }
-  }
+  "dependencies": {},
+  "parameters": {}
 }

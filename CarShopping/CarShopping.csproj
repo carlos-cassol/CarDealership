@@ -28,12 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="VisualStudio.gitignore">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
