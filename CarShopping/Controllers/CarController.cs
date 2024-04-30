@@ -26,7 +26,7 @@ namespace CarShopping.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<IEnumerable<CarVO>>> FindById(long id)
+        public async Task<ActionResult<CarVO>> FindById(long id)
         {
             var product = await _carRepository.FindById(id);
             return Ok(product);

@@ -1,6 +1,8 @@
-﻿namespace CarShopping.Data.ValueObjects
+﻿using CarShopping.Model.Base;
+
+namespace CarShopping.Data.ValueObjects
 {
-    public class CarDealerVO
+    public class CarDealerVO : BaseEntityVO
     {
         public string Name { get; set; }
         public int CarQuantity { get; set; }

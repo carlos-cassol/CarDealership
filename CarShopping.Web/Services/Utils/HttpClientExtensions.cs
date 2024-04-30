@@ -35,5 +35,10 @@ namespace CarShopping.Web.Services.Utils
             content.Headers.ContentType = ContentType;
             return httpClient.PutAsync(url, content);
         }
+
+        public static Task<HttpResponseMessage> DeleeAsync<T>(this HttpClient httpClient, string url)
+        {
+            return httpClient.DeleteAsync(url);
+        }
     }
 }

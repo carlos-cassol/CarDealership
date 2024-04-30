@@ -1,0 +1,83 @@
+﻿@model CarShopping.Web.Models.CarModel
+
+@{
+    ViewData["Title"] = "DeleteCar";
+}
+
+<h1>ESTOQUE</h1>
+
+<h4>Remover Veículo do Estoque</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DeleteCar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Id" hidden/>
+            <div class="form-group">
+                <label asp-for="Brand" class="control-label">Marca:</label>
+                <b>
+                @Html.DisplayFor(model => model.Brand)
+                </b>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Modelo:</label>
+                <b>
+                @Html.DisplayFor(model => model.Name)
+                </b>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Descrição:</label>
+                <b>
+                @Html.DisplayFor(model => model.Description)
+                </b>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mileage" class="control-label">Quilometragem:</label>
+                <b>
+                @Html.DisplayFor(model => model.Mileage)
+                </b>
+            </div>
+            <div class="form-group">
+                <label asp-for="FabricationDate" class="control-label">Ano do Carro:</label>
+                @{
+                    var date = Model.FabricationDate.ToString("yyyy");
+                }
+                <b>
+                @Html.DisplayFor(modelItem => date)
+                </b>
+            </div>
+            <div class="form-group">
+                <label asp-for="SellingValue" class="control-label">Valor de Venda:</label>
+                @{
+                    var sellingValue = Model.SellingValue.ToString("c");
+                }
+                <b>
+                @Html.DisplayFor(modelItem => sellingValue)
+                </b>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" disabled asp-for="IsSold" />Já foi vendido?
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" disabled asp-for="IsAvaliable" />Está disponível?
+                </label>
+            </div>
+            <div class="form-group">
+                <a asp-action="CarIndex" class="btn btn-success" asp-route-id="@Model.Id">
+                    <i class="fas fa-edit">Voltar a Lista</i>
+                </a>
+                <input type="submit" value="Remover" class="btn btn-danger" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
