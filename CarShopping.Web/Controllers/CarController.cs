@@ -1,6 +1,9 @@
 ﻿using CarShopping.Web.Models;
 using CarShopping.Web.Services.IServices;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CarShopping.Web.Controllers
 {
@@ -14,13 +17,28 @@ namespace CarShopping.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> CarIndex()
+        public async Task<IActionResult> CarIndex(int page = 1)
         {
-            var cars = await _carService.FindAllCars();
-            return View(cars);
+            const int pageSize = 15; 
+            var allCars = await _carService.FindAllCars();
+            int startIndex = (page - 1) * pageSize;
+            var carsInPage = allCars.Skip(startIndex).Take(pageSize);
+            int totalPages = (int)Math.Ceiling((double)allCars.Count() / pageSize);
+
+            ViewBag.PageIndex = page;
+            ViewBag.TotalPages = totalPages;
+
+            return View(carsInPage);
         }
 
-        public async Task<IActionResult> CreateCar()
+        [HttpGet]
+        public async Task<IActionResult> AllCars()
+        {
+            var allCars = await _carService.FindAllCars();
+            return View(allCars);
+        }
+
+            public async Task<IActionResult> CreateCar()
         {
             return View();
         }
@@ -36,15 +54,15 @@ namespace CarShopping.Web.Controllers
             return View(car);
         }
 
-        public async Task<IActionResult> UpdateCar(long Id)
+        public async Task<IActionResult> UpdateCar(long id)
         {
-            var car = await _carService.FindCarById(Id);
+            var car = await _carService.FindCarById(id);
             if (car != null)
             {
                 return View(car);
             }
             return NotFound();
-        }        
+        }
 
         [HttpPost]
         public async Task<IActionResult> UpdateCar(CarModel car)
@@ -67,7 +85,7 @@ namespace CarShopping.Web.Controllers
         public async Task<IActionResult> DeleteCar(long id)
         {
             var model = await _carService.FindCarById(id);
-            if(model != null) return View(model);
+            if (model != null) return View(model);
             return NotFound();
         }
 

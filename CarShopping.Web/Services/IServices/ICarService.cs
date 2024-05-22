@@ -1,4 +1,5 @@
 ﻿using CarShopping.Web.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CarShopping.Web.Services.IServices
 {
@@ -6,9 +7,6 @@ namespace CarShopping.Web.Services.IServices
     {
         Task<IEnumerable<CarModel>> FindAllCars();
         Task<CarModel> FindCarById(long carId);
-        //Task<CarModel> FindCarByBrand(string brand);
-        //Task<CarModel> FindCarByName(string name);
-        //Task<CarModel> FindCarByValue(double value);
         Task<CarModel> CreateCar(CarModel model);
         Task<CarModel> UpdateCar(CarModel model);
         Task<bool> DeleteCar(long carId);
