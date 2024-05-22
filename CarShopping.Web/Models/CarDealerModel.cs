@@ -1,4 +1,6 @@
-﻿namespace CarShopping.Web.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace CarShopping.Web.Models
 {
     public class CarDealerModel
     {
