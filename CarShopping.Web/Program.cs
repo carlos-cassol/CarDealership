@@ -10,6 +10,11 @@ builder.Services.AddHttpClient<ICarService, CarService>(
     c => c.BaseAddress = new Uri(builder.Configuration["ServicesUrls:CarShoppingApi"])
     );
 
+builder.Services.AddHttpClient<ICarDealerService, CarDealerService>(
+    c => c.BaseAddress = new Uri(builder.Configuration["ServicesUrls:CarShoppingApi"])
+    );
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,7 +1,6 @@
 ﻿using CarShopping.Web.Models;
 using CarShopping.Web.Services.IServices;
 using CarShopping.Web.Services.Utils;
-using System.Reflection;
 
 namespace CarShopping.Web.Services
 {
@@ -23,7 +22,6 @@ namespace CarShopping.Web.Services
         public async Task<CarModel> FindCarById(long carId)
         {
             var response = await _client.GetAsync($"{BasePath}/{carId}");
-            var teste = await response.ReadContentAs<CarModel>();
             return await response.ReadContentAs<CarModel>();
         }
 
