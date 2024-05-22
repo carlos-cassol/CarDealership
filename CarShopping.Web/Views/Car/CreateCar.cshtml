@@ -1,68 +1,100 @@
 ﻿@model CarShopping.Web.Models.CarModel
 
 @{
-    ViewData["Title"] = "CreateCar";
+    ViewData["Title"] = "Adicionar Veículo";
 }
 
-<h1>CreateCar</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
 
-<h4>CarModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="CreateCar">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Brand" class="control-label"></label>
-                <input asp-for="Brand" class="form-control" />
-                <span asp-validation-for="Brand" class="text-danger"></span>
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        .back-to-list {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">@ViewData["Title"]</h1>
+        <div class="form-container">
+            <hr />
+            <form asp-action="CreateCar">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Brand" class="control-label">Marca</label>
+                    <input asp-for="Brand" class="form-control" />
+                    <span asp-validation-for="Brand" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label">Modelo</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label">Descrição</label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mileage" class="control-label">Quilometragem</label>
+                    <input asp-for="Mileage" class="form-control" />
+                    <span asp-validation-for="Mileage" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FabricationDate" class="control-label">Data de Fabricação</label>
+                    <input asp-for="FabricationDate" type="date" class="form-control" />
+                    <span asp-validation-for="FabricationDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SellingValue" class="control-label">Valor de Venda</label>
+                    <input asp-for="SellingValue" class="form-control" />
+                    <span asp-validation-for="SellingValue" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <input class="form-check-input" asp-for="IsSold" />
+                    <label class="form-check-label" asp-for="IsSold">Já foi Vendido?</label>
+                </div>
+                <div class="form-group form-check">
+                    <input class="form-check-input" asp-for="IsAvaliable" />
+                    <label class="form-check-label" asp-for="IsAvaliable">Disponibilidade</label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Adicionar Veículo" class="btn btn-primary" />
+                </div>
+            </form>
+            <div class="back-to-list">
+                <a asp-action="CarIndex" class="btn btn-secondary">Voltar para a Lista</a>
             </div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Mileage" class="control-label"></label>
-                <input asp-for="Mileage" class="form-control" />
-                <span asp-validation-for="Mileage" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FabricationDate" class="control-label"></label>
-                <input asp-for="FabricationDate" class="form-control" />
-                <span asp-validation-for="FabricationDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SellingValue" class="control-label"></label>
-                <input asp-for="SellingValue" class="form-control" />
-                <span asp-validation-for="SellingValue" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsSold" /> @Html.DisplayNameFor(model => model.IsSold)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsAvaliable" /> @Html.DisplayNameFor(model => model.IsAvaliable)
-                </label>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="CreateCar" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+</body>
+</html>

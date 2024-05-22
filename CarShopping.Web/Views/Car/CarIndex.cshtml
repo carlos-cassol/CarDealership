@@ -1,96 +1,140 @@
 ﻿@model IEnumerable<CarShopping.Web.Models.CarModel>
 
 @{
-    ViewData["Title"] = "CarIndex";
+    ViewData["Title"] = "Lista de Veículos";
 }
 
-<h1>CarIndex</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 1rem;
+            background-color: transparent;
+        }
 
-<p>
-    <a asp-action="CreateCar" class="btn btn-success">
-        <i class="fas fa-edit">Adicionar Veículo</i>
-    </a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Marca
-            </th>
-            <th>
-                Modelo
-            </th>
-            <th>
-                Descrição
-            </th>
-            <th>
-                Quilometragem
-            </th>
-            <th>
-                Data de Fabricação
-            </th>
-            <th>
-                Valor de Venda
-            </th>
-            <th>
-                Já foi Vendido?
-            </th>
-            <th>
-                Disponibilidade
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Mileage)
-            </td>
-            <td>
-                @{
-                    var date = item.FabricationDate.ToString("yyyy");
-                 }
-                @Html.DisplayFor(modelItem => date)
-            </td>
-            <td>
-                    @{
-                        var sellingValue = item.SellingValue.ToString("c");
-                    }
-                    @Html.DisplayFor(modelItem => sellingValue)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsSold)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsAvaliable)
-            </td>
-            <td>
-                    <a asp-action="UpdateCar" class="btn btn-warning" asp-route-id="@item.Id">
-                        <i class="fas fa-edit">Atualizar Veículo</i>
+            .table th,
+            .table td {
+                padding: 0.75rem;
+                vertical-align: top;
+                border-top: 1px solid #dee2e6;
+            }
+
+            .table thead th {
+                vertical-align: bottom;
+                border-bottom: 2px solid #dee2e6;
+            }
+
+            .table tbody + tbody {
+                border-top: 2px solid #dee2e6;
+            }
+
+            .table .table {
+                background-color: #fff;
+            }
+
+        .thead-dark th {
+            color: #fff;
+            background-color: #343a40;
+            border-color: #454d55;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
+
+        .mb-3 {
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-4">Lista de Veículos</h1>
+
+        <div class="d-flex justify-content-end mb-3">
+            <a asp-action="CreateCar" class="btn btn-success">
+                <i class="fas fa-plus-circle"></i> Adicionar Veículo
+            </a>
+        </div>
+
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Descrição</th>
+                    <th>Quilometragem</th>
+                    <th>Data de Fabricação</th>
+                    <th>Valor de Venda</th>
+                    <th>Já foi Vendido?</th>
+                    <th>Disponibilidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Brand)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Mileage)</td>
+                        <td>@item.FabricationDate.ToString("yyyy")</td>
+                        <td>@item.SellingValue.ToString("c")</td>
+                        <td>@(item.IsSold ? "Sim" : "Não")</td>
+                        <td>@(item.IsAvaliable ? "Disponível" : "Indisponível")</td>
+                        <td class="d-flex justify-content-around">
+                            <a asp-action="UpdateCar" class="btn btn-warning btn-sm" asp-route-id="@item.Id">
+                                <i class="fas fa-edit"></i> Atualizar
+                            </a>
+                            <a asp-action="FindCarById" class="btn btn-info btn-sm" asp-route-id="@item.Id">
+                                <i class="fas fa-search"></i> Inspecionar
+                            </a>
+                            <a asp-action="DeleteCar" class="btn btn-danger btn-sm" asp-route-id="@item.Id">
+                                <i class="fas fa-trash"></i> Remover
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <nav>
+            <ul class="pagination justify-content-center">
+                <li class="page-item @(ViewBag.PageIndex == 1 ? "disabled" : "")">
+                    <a class="page-link" href="@(Url.Action("CarIndex", "Car", new { page = ViewBag.PageIndex - 1 }))" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
                     </a>
-            </td>
-            <td>
-                    <a asp-action="FindCarById" class="btn btn-info" asp-route-id="@item.Id">
-                        <i class="fas fa-edit">Inspencionar Veículo</i>
+                </li>
+                @for (var i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    <li class="page-item @(i == ViewBag.PageIndex ? "active" : "")">
+                        <a class="page-link" href="@(Url.Action("CarIndex", "Car", new { page = i }))">@i</a>
+                    </li>
+                }
+                <li class="page-item @(ViewBag.PageIndex == ViewBag.TotalPages ? "disabled" : "")">
+                    <a class="page-link" href="@(Url.Action("CarIndex", "Car", new { page = ViewBag.PageIndex + 1 }))" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
                     </a>
-            </td>
-            <td>
-                    <a asp-action="DeleteCar" class="btn btn-danger" asp-route-id="@item.Id">
-                        <i class="fas fa-edit">Remover Veículo</i>
-                    </a>
-                
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
