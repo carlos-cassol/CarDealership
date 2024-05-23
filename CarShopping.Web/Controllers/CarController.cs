@@ -93,7 +93,7 @@ namespace CarShopping.Web.Controllers
         public async Task<IActionResult> DeleteCar(CarModel car)
         {
             var response = await _carService.DeleteCar(car.Id);
-            if (response != null) return RedirectToAction(nameof(CarIndex));
+            if (response != true) return RedirectToAction(nameof(CarIndex));
             return View(car);
         }
     }
