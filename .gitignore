@@ -32,6 +32,9 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+# Não ignorar a pasta específica Execution.AccessBridge/Win32 
+!src/Integration/Studio.Integration.AccessBridge/Win32/
+
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
@@ -82,8 +85,6 @@ StyleCopReport.xml
 *.pgc
 *.pgd
 *.rsp
-# but not Directory.Build.rsp, as it configures directory-level build defaults
-!Directory.Build.rsp
 *.sbr
 *.tlb
 *.tli
@@ -398,3 +399,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+StudioInstaller/Release/StudioInstaller.msi
