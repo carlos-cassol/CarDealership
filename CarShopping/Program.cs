@@ -31,6 +31,7 @@ builder.Services.AddScoped<IBusinessRepository, BusinessRepository>();
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
