@@ -1,4 +1,4 @@
-using AutoMapper;
+﻿using AutoMapper;
 using CarShopping.Config;
 using CarShopping.Model.Context;
 using CarShopping.Repository;
@@ -29,6 +29,19 @@ builder.Services.AddScoped<ICarRepository, CarRepository>();
 builder.Services.AddScoped<ICarDealerRepository, CarDealerRepository>();
 builder.Services.AddScoped<IBusinessRepository, BusinessRepository>();
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
 
 var app = builder.Build();
 
@@ -39,13 +52,14 @@ var app = builder.Build();
 //    app.UseSwaggerUI();
 //}
 
-app.UseSwagger();
-app.UseSwaggerUI();
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseSwagger();
+app.UseSwaggerUI();
 
+app.UseAuthorization();
 app.MapControllers();
 
 app.Run();

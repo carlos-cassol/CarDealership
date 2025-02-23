@@ -1,6 +1,7 @@
 ﻿using CarShopping.Model.Base;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace CarShopping.Model
 {
@@ -30,5 +31,9 @@ namespace CarShopping.Model
         [Column("isAvaliable")]
         [Required]
         public bool IsAvaliable { get; set; }
+        [ForeignKey("Owner")]
+        public Guid OwnerId { get; set; }
+        [JsonIgnore]
+        public CarDealer? Owner { get; set; }
     }
 }

@@ -6,7 +6,6 @@ namespace CarShopping.Model.Base
     public class BaseEntity
     {
         [Key]
-        [Column("id")]
-        public long Id { get; set; }
+        public Guid Id { get; set; }
     }
 }
