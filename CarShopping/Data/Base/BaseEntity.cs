@@ -5,6 +5,6 @@ namespace CarShopping.Model.Base
 {
     public class BaseEntityVO
     {
-        public long Id { get; set; }
+        public Guid Id { get; set; }
     }
 }

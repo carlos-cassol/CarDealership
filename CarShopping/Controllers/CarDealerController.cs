@@ -18,34 +18,37 @@ namespace CarShopping.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<CarDealerVO>> Get()
+        public async Task<ActionResult<CarDealerVO>> Get(Guid id)
         {
-            if (_carDealerRepository.Find().Result == null)
+            var carDealer = _carDealerRepository.Find(id).Result;
+            if (carDealer is null)
             {
                 return BadRequest("Não existem revendedores cadastrados no sistema.");
             }
-            await _carDealerRepository.Update();
 
-            CarDealerVO vo = await _carDealerRepository.Find();
-            
-            return Ok(vo);
+            var updatedDealer = await _carDealerRepository.UpdateValues(carDealer.Id);
+
+            return Ok(updatedDealer);
         }
 
         [HttpPost]
-        public async Task<ActionResult<CarDealerVO>> Create(CarDealerVO vo)
+        public async Task<ActionResult<CarDealerVO>> Create([FromBody] CarDealerVO vo)
         {
-
-            if (_carDealerRepository.Find().Result != null)
-            {
-                return BadRequest("Já existe um revendedor cadastrado no sistema.");
-            }
             var dealer = await _carDealerRepository.Create(vo);
             return Ok(dealer);
         }
+
         [HttpPut]
-        private async Task<ActionResult<CarDealerVO>> Update()
+        public async Task<ActionResult<CarDealerVO>> Update([FromBody] CarDealerVO vo)
         {
-            var dealer = await _carDealerRepository.Update();
+            var dealer = await _carDealerRepository.Update(vo);
+            return Ok(dealer);
+        }
+
+        [HttpPut("UpdateValues")]
+        public async Task<ActionResult<CarDealerVO>> UpdateValues([FromBody] CarDealerVO vo)
+        {
+            var dealer = await _carDealerRepository.UpdateValues(vo.Id);
             return Ok(dealer);
         }
     }

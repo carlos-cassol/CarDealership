@@ -33,7 +33,7 @@ namespace CarShopping.Repository
 
         }
 
-        public async Task<bool> Delete(long Id)
+        public async Task<bool> Delete(Guid Id)
         {
             try
             {
@@ -56,10 +56,19 @@ namespace CarShopping.Repository
             return _mapper.Map<List<CarVO>>(listCar);
         }
 
-        public async Task<CarVO> FindById(long id)
+        public async Task<CarVO> FindById(Guid id)
         {
             Car car = await _context.Car.Where(x => x.Id == id).FirstOrDefaultAsync();
             return _mapper.Map<CarVO>(car);
+        }
+
+        public async Task<IEnumerable<CarVO>> FindByDealership(Guid ownerId)
+        {
+            var carsByDealership = await _context.Car.Where(c => c.OwnerId == ownerId).ToListAsync();
+
+            var cars = _mapper.Map<List<CarVO>>(carsByDealership);
+
+            return cars;
         }
 
         //public async Task<IEnumerable<CarVO>> DownloadCarsAsTextFile()

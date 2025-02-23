@@ -1,6 +1,7 @@
 ﻿using CarShopping.Model.Base;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace CarShopping.Model
 {
@@ -22,5 +23,8 @@ namespace CarShopping.Model
         [Column("amountAvaliableCars")]
         [Required]
         public int AmountAvaliableCars { get; set; }
+
+        [JsonIgnore]
+        public List<Car>? Cars { get; set; } = new();
     }
 }

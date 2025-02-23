@@ -14,6 +14,8 @@ namespace CarShopping.Config
                 config.CreateMap<CarDealer, CarDealerVO>();
                 config.CreateMap<Car, CarVO>();
                 config.CreateMap<CarVO, Car>();
+                config.CreateMap<CarParts, CarPartsVO>();
+                config.CreateMap<CarPartsVO, CarParts>();
             });
             return mappingConfig;
         }
